@@ -50,7 +50,9 @@ echo ""
 # Vérifier la connexion à la base de données
 echo "🔍 Test de connexion à la base de données..."
 cd InstitutFroebel.API
-dotnet run --no-build --no-restore --configuration Release --verbosity quiet 2>&1 | head -n 10
+echo "⚠️  Note: Configuration de base de données requise pour Codespaces"
+echo "   Copiez appsettings.Codespaces.Example.json vers appsettings.Codespaces.json"
+echo "   et configurez votre chaîne de connexion PostgreSQL"
 
 echo ""
 echo "🌐 URLs d'accès (après démarrage):"

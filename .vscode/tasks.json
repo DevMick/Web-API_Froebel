@@ -95,6 +95,38 @@
         "clear": false
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Setup Codespaces Config",
+      "type": "shell",
+      "command": "cp",
+      "args": ["InstitutFroebel.API/appsettings.Codespaces.Example.json", "InstitutFroebel.API/appsettings.Codespaces.json"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run API in Codespaces",
+      "type": "shell",
+      "command": "dotnet",
+      "args": ["run", "--project", "InstitutFroebel.API/InstitutFroebel.API.csproj", "--environment", "Codespaces"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
     }
   ]
 } 
