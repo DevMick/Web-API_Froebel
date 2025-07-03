@@ -375,6 +375,9 @@ FodyWeavers.xsd
 # Secrets and configuration files
 appsettings.Production.json
 appsettings.Staging.json
+appsettings.json
+appsettings.Development.json
+appsettings.Codespaces.json
 secrets.json
 *.pfx
 *.key
