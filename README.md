@@ -181,4 +181,4 @@ Pour toute question ou problème :
 
 ---
 
-**Développé avec ❤️ pour l'Institut Froebel** 
+**Développé avec ❤️ pour l'Institut Froebel**
