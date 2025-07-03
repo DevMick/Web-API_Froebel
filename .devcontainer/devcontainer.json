@@ -1,0 +1,51 @@
+{
+  "name": "Institut Froebel API - ASP.NET Core",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:9.0",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "portsAttributes": {
+    "5000": {
+      "label": "API HTTP",
+      "onAutoForward": "notify",
+      "protocol": "http"
+    },
+    "5001": {
+      "label": "API HTTPS",
+      "onAutoForward": "notify",
+      "protocol": "https"
+    },
+    "8080": {
+      "label": "Swagger UI",
+      "onAutoForward": "notify",
+      "protocol": "http"
+    }
+  },
+  "forwardPorts": [5000, 5001, 8080],
+  "postCreateCommand": "dotnet restore",
+  "postStartCommand": "dotnet build",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-dotnettools.vscode-dotnet-sdk",
+        "ms-vscode.vscode-json",
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-docker"
+      ],
+      "settings": {
+        "dotnet.defaultSolution": "InstitutFroebel.sln",
+        "omnisharp.enableRoslynAnalyzers": true,
+        "omnisharp.enableEditorConfigSupport": true
+      }
+    }
+  },
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=${localWorkspaceFolder}/.devcontainer/.bashrc,target=/home/vscode/.bashrc,type=bind,consistency=cached"
+  ]
+} 
